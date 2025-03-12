@@ -1,3 +1,6 @@
+Built with @bolt.new, cursor AI agent for [Niinq Finnish learning app](https://niinq.com/) (check out [Kaisa Salonpää](https://www.linkedin.com/in/kaisa-salonpaa/), the owner :))
+
+
 # Finnish Language Learning App
 
 Welcome to the Finnish Language Learning App! This app helps you learn Finnish through realistic conversations in everyday situations.
