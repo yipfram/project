@@ -1,50 +1,61 @@
 # Finnish Language Learning App
 
-An interactive app to help you learn Finnish through simulated real-life scenarios.
+Welcome to the Finnish Language Learning App! This app helps you learn Finnish through realistic conversations in everyday situations.
 
-## Features
+## What This App Does
 
-- Interactive scenario-based learning
-- Text and speech input options
-- AI-powered conversation partner
-- Feedback on language usage
+This app lets you practice Finnish by having conversations with a virtual Finnish person. It's like having a Finnish friend who helps you practice the language in real-life situations!
 
-## Shop Scenario
+Currently, you can practice a conversation at a supermarket, where you'll talk with a virtual cashier in Finnish.
 
-The app includes a shop scenario where you can practice basic Finnish conversation with a cashier. You'll learn:
+## Before You Start
 
-- Basic greetings and courtesies
-- How to ask for products
-- Numbers and prices
-- How to pay and say goodbye
+This app uses artificial intelligence (AI) to create realistic conversations. To access the full features:
 
-## Setting Up OpenAI API Integration
+1. You'll need an OpenAI API key (think of this as a special password that lets the app use AI)
+2. Don't worry if this sounds complicated - we'll explain how to get one below!
 
-The app supports both mock responses (for demo) and real OpenAI API integration. To use the real AI:
+## Getting Your OpenAI API Key
 
-1. Create an account at [OpenAI](https://platform.openai.com/)
-2. Navigate to the API section and create a new API key
-3. In the app, click the "Connect OpenAI API" button in the shop scenario
-4. Enter your API key in the dialog that appears
-5. Your key is stored locally on your device only
+1. Go to the OpenAI website: [https://platform.openai.com/](https://platform.openai.com/)
+2. Create an account or sign in
+3. Click on your profile picture in the top-right corner
+4. Select "API keys"
+5. Click "Create new secret key"
+6. Give it a name (like "Finnish App") and click "Create"
+7. Copy your new key (it looks like a long string of letters and numbers starting with "sk-")
 
-## How to Use the Shop Scenario
+## Setting Up the App
 
-1. From the scenarios tab, select "At the Supermarket"
-2. The cashier will greet you in Finnish
-3. Respond by typing or using the microphone button
-4. Continue the conversation until you say goodbye
-5. Receive feedback on your Finnish language skills
+If you're just downloading this app for the first time:
 
-## Common Finnish Phrases for Shopping
+1. Create a file named `.env` in the main folder (the same folder as this README)
+2. In that file, write this single line, replacing `your_key_here` with your OpenAI API key:
+   ```
+   OPENAI_API_KEY=your_key_here
+   ```
+3. Save the file
 
-- "Hei" / "Terve" (Hello)
+If you don't want to create this file, that's okay too! The app will ask you for your API key when you open it.
+
+## Using the App
+
+1. Start the app (see instructions below)
+2. Select the "Shop" scenario
+3. The virtual cashier will greet you in Finnish
+4. Reply by typing in the text box at the bottom
+5. Continue the conversation until you say goodbye ("Näkemiin" or "Moi moi")
+6. Get helpful feedback on how you did!
+
+## Helpful Finnish Phrases for Shopping
+
+- "Hei" / "Moi" (Hello)
 - "Mitä tämä maksaa?" (How much does this cost?)
 - "Saanko [tuotteen]?" (May I have [product]?)
 - "Kiitos" (Thank you)
-- "Näkemiin" (Goodbye)
+- "Näkemiin" / "Moi moi" (Goodbye)
 
-## Products in Finnish
+## Common Products in Finnish
 
 - "leipä" (bread)
 - "maito" (milk)
@@ -53,13 +64,29 @@ The app supports both mock responses (for demo) and real OpenAI API integration.
 - "sokeri" (sugar)
 - "suola" (salt)
 
+## Starting the App
+
+You'll need to have Node.js installed on your computer to run this app. If you don't have it yet, download it from [nodejs.org](https://nodejs.org/).
+
+Once installed:
+
+1. Open a command prompt (Windows) or terminal (Mac/Linux)
+2. Navigate to the folder containing this app
+3. Type `npm install` and press Enter (this installs all the necessary components)
+4. Type `npm run dev` and press Enter (this starts the app)
+5. Open your web browser and go to: http://localhost:8081
+   - Or use the Expo Go app on your phone by scanning the QR code that appears
+
+## What's Under the Hood
+
+This app is built with:
+
+- **React Native**: A framework for building mobile apps
+- **Expo**: A platform that makes it easier to build and test React Native apps
+- **OpenAI API**: Powers the intelligent conversations
+
+Don't worry if these terms don't make sense to you - you don't need to understand them to use the app!
+
 ## Privacy Note
 
-When using your own OpenAI API key, your conversations are sent to OpenAI for processing through your own account. No data is stored on our servers.
-
-## Development Notes
-
-This app is built with React Native and Expo, using TypeScript for type safety.
-
-- To run the app: `npm run dev`
-- To build for production: `npm run build:web` 
+When using your OpenAI API key, your conversations are sent to OpenAI through your own account. No data is stored on our servers. The app keeps your API key on your device only. 
